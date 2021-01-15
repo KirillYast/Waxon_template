@@ -1,0 +1,10 @@
+.border-aux {
+  border: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.section-padding {
+  padding: 40px 376px 40px 376px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

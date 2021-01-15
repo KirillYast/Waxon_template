@@ -1,0 +1,161 @@
+@import "fonts.less";
+@import "var.less";
+@import "mixin.less";
+@import "section-setting.less";
+
+body{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.page-text{
+  .font('Montserrat'; @text-font-w;);
+  font-size: @text-size;
+}
+/*page-header style*/
+.page-header{
+
+  color:@color-white;
+  background-color: brown;
+  &__title{
+    .font('Raleway'; 400)
+  }
+  &__top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 285px 0;
+  }
+}
+.logo{
+  text-decoration: none;
+  display: block;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  color:@color-white;
+  transition: color @color-time;
+  &__svg{
+    fill: @color-white;
+    transition: fill @color-time;
+  }
+  &__name{
+    font-size: 34px;
+    display: block;
+  }
+  &:hover{
+    color:@color-hover;
+  }
+  &:active{
+    text-shadow: 0px 0px @text-shadow @color-active;
+  }
+  &:hover &__svg{
+    fill: @color-hover;
+  }
+  &:active &__svg{
+    stroke: @color-active;
+    stroke-width: 0.5px;
+  }
+}
+.nav{
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+list-style-type: none;
+margin: 0 5.47% 0 5.47%;
+width: 100%;
+&__link{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: @nav-max-char;
+  display: block;
+  text-decoration: none;
+  color: @color-white;
+  margin: 0 0 0 29px;
+  white-space: nowrap;
+  transition: color @color-time;
+  &:first-child{
+    margin: 0;
+  }
+  &:hover{
+    color:@color-hover;
+  }
+  &:active{
+    text-shadow: 0px 0px @text-shadow @color-active;
+  }
+}
+}
+.add-nav{
+  display: flex;
+  &__basket{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    &__svg{
+      fill: @color-white;
+      transition: fill @color-time;
+    }
+    &:hover &__svg{
+      fill: @color-hover;
+    }
+    &:active &__svg{
+      stroke: @color-active;
+      stroke-width: @header-svg-stroke-width;
+    }
+  }
+  &__search{
+    position: relative;
+    margin: 0 0 0 29px;
+    &__label{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &__svg{
+      fill: @color-white;
+      transition: fill @color-time;
+    }
+    &:hover &__svg{
+      fill: @color-hover;
+    }
+    &:active &__svg{
+      stroke: @color-active;
+      stroke-width: @header-svg-stroke-width;
+    }
+    &__input{
+      width: 0;
+      min-height: 0;
+      padding: 5px;
+      outline: none;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 40px;
+      left: -119px;
+      .font('Montserrat'; @text-font-w;);
+      font-size: @text-size-up;
+      color: @color-white;
+      text-transform: capitalize;
+      &:focus{
+        width: 150px;
+        min-height: 20px;
+        transition: width 1s ease;
+        border-bottom: 1px solid @color-white;
+      }
+      &:focus ~ .add-nav__search__label>.add-nav__search__svg{
+        stroke: @color-active;
+        stroke-width: @header-svg-stroke-width;
+        fill: aqua;
+      }
+      input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+      input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration { display: none; }
+    }
+  }
+}
+  
