@@ -53,11 +53,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.section-padding {
-  padding: 40px 376px 40px 376px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -71,6 +66,11 @@ body {
 .page-header {
   color: #ffffff;
   background-color: brown;
+}
+.page-header__section-padding {
+  padding: 40px 19.5835% 40px 19.5835%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .page-header__title {
   font-family: 'Raleway', sans-serif;
@@ -87,7 +87,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 285px 0;
+}
+.page-header__top_margin-element {
+  margin: 0 5.393% 0 0;
+}
+.page-header__top_margin-element:last-child {
+  margin: 0;
 }
 .logo {
   text-decoration: none;
@@ -137,8 +142,13 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style-type: none;
-  margin: 0 5.47% 0 5.47%;
   width: 100%;
+}
+.nav_margin-element {
+  margin: 0 0 0 29px;
+}
+.nav_margin-element:first-child {
+  margin: 0;
 }
 .nav__link {
   overflow: hidden;
@@ -147,13 +157,9 @@ body {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  margin: 0 0 0 29px;
   white-space: nowrap;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
-}
-.nav__link:first-child {
-  margin: 0;
 }
 .nav__link:hover {
   color: #c7b299;

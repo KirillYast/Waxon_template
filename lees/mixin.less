@@ -11,3 +11,31 @@
   font-size: @text-size;
   line-height: @line-height;
 }
+.section-padding(){
+  padding: @padd-t @padd-r @padd-b @padd-l;
+  box-sizing: border-box;
+}
+.section-padding(@padd-t @padd-b){
+  padding: @padd-t @padd-r @padd-b @padd-l;
+  box-sizing: border-box;
+}
+.section-padding(@padd-t @padd-r @padd-b @padd-l){
+  padding: @padd-t @padd-r @padd-b @padd-l;
+  box-sizing: border-box;
+}
+.margin-element(@marg){
+  &_margin-element{
+    margin: 0 @marg 0 0;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  }
+.margin-element_first-child(@marg){
+&_margin-element{
+  margin: 0 0 0 @marg;
+  &:first-child{
+    margin: 0;
+  }
+}
+}
