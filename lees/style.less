@@ -3,32 +3,51 @@
 @import "mixin.less";
 @import "section-setting.less";
 
-body{
+.body{
   max-width: 1920px;
   margin: 0 auto;
 }
+.page-button-title{
+  .font('Raleway'; 800);
+  font-size: 14px;
+}
 .page-text{
   .font('Montserrat'; @text-font-w;);
-  font-size: @text-size;
+  font-size: @text-size-page
+}
+.page-text_blocks{
+  .font('Montserrat'; @text-font-w;);
+  font-size: @text-size-blocks
+}
+.logo-title{
+  .font('Raleway'; 400)
 }
 /*page-header style*/
-.page-header{
+.header{
   color:@color-white;
   background-color: brown;
-  &__section-padding{
-    .section-padding(40px;40px)
+  .section-padding(40px; 0; 40px; 0);
+  &-slogan-text{
+    .font('Raleway'; 500);
+    font-size: 36px;
   }
-  &__title{
-    .font('Raleway'; 400)
+  &-title{
+    .font('Raleway'; 800);
+    font-size: 52px;
   }
-  &__top{
+  &__menu{
+    .section-padding(0px;0px);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .margin-element(5.393%)
+    &_margin-element{
+    margin:0 6.8553% 0 6.8553%;
+    }
   }
-}
+  &__slider{
+
+  }
 .logo{
   text-decoration: none;
   display: block;
@@ -132,8 +151,6 @@ width: 100%;
       position: absolute;
       top: 40px;
       left: -119px;
-      .font('Montserrat'; @text-font-w;);
-      font-size: @text-size-up;
       color: @color-white;
       text-transform: capitalize;
       &:focus{
@@ -156,4 +173,43 @@ width: 100%;
     }
   }
 }
+}
+.header-slider{
+  display: flex;
+  &-text-position{
+    margin: 0;
+    text-align: center;
+  }
+  &__arrow{
+    display: block;
+    content: " ";
+    width: 51.619px;
+    height: 51.619px;
+    box-sizing: border-box;
+    border-top: 2px solid #9b9a98;
+    border-left: 2px solid #9b9a98;
+    &_left{
+      transform: rotate(315deg);
+    }
+    &_right{
+      transform: rotate(135deg);
+    }
+  }
+  &__item{
+    max-width: 590px;
+    text-align: center;
+  }
+  &__slogan{
+    display: block
+  }
+  &__title{
   
+  }
+  &__text{
+  }
+  &__btn{
+  }
+}
+.slider-control{
+
+}
